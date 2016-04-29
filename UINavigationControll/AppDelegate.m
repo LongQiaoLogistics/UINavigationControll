@@ -7,15 +7,90 @@
 //
 
 #import "AppDelegate.h"
+#import "PersonalViewController.h"
+#import "SendCargoViewController.h"
+#import "FindCargoViewController.h"
+#import "CargoInfosViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
+
 @implementation AppDelegate
 
-
+const static NSString *cargoMessage = @"货源消息";
+/**
+ *  <#Description#>
+ *
+ *  @param application   <#application description#>
+ *  @param launchOptions <#launchOptions description#>
+ *
+ *  @return <#return value description#>
+ */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    UIScreen *screnn = [UIScreen mainScreen];
+    self.window = [[UIWindow alloc]initWithFrame:screnn.bounds];
+    
+    //设置UITabBarController 作为rootViewController
+    UITabBarController  *tbc = [[UITabBarController alloc]init];
+    /**
+     1、控制器跳转
+     
+     导航控制器的定义中，提供了Push与Pop的方法，来实现子控制器之间的跳转，其中：Push对应入栈操作，Pop对应出栈操作。
+     
+     - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated; // 入栈操作，显示新的子控制器
+     
+     - (nullable UIViewController *)popViewControllerAnimated:(BOOL)animated;//出栈操作，显示栈顶的控制器
+     - (nullable NSArray *)popToViewController:(UIViewController *)viewController animated:(BOOL)animated; // 出栈操作，显示指定的控制器
+     - (nullable NSArray *)popToRootViewControllerAnimated:(BOOL)animated; // 出栈操作，显示导航控制器的根控制器
+     
+     2、管理子控制器
+     
+     导航控制器对象中提供了属性，用于管理该导航控制器下的所有子控制器。
+     
+     @property(nonatomic,copy) NSArray *viewControllers;//存放本导航控制器管理的所有子控制器
+     @property(nullable, nonatomic,readonly,strong) UIViewController *topViewController;//获取栈顶控制器
+     
+     
+     */
+    //导航试图用于导航个人中心
+    PersonalViewController *pvc = [[PersonalViewController alloc]init];
+    pvc.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController *unc = [[UINavigationController alloc]initWithRootViewController:pvc];
+    //尺寸，UITabBarItem有图片icon也有文字，图片是50*50
+    UITabBarItem *personTabBarItem = [[UITabBarItem alloc]initWithTitle:@"个人中心" image:nil selectedImage:nil];
+    unc.tabBarItem = personTabBarItem;
+    
+    //货源消息控制器
+    CargoInfosViewController *civc = [[CargoInfosViewController alloc]init];
+    UINavigationController *cargoInfosDefineUserNav = [[UINavigationController alloc]initWithRootViewController:civc];
+    UITabBarItem *cargoInfosTabBarItem = [[UITabBarItem alloc]initWithTitle:cargoMessage image:nil selectedImage:nil];
+    cargoInfosDefineUserNav.tabBarItem = cargoInfosTabBarItem;
+    
+    //发货视图控制器
+    SendCargoViewController *scvc = [[SendCargoViewController alloc]init];
+    UIImage *sendCargoImage = [[UIImage imageNamed:@"home.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *sendCargoImageSelect = [[UIImage imageNamed:@"user1.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UITabBarItem *sendCargoTabBarItem = [[UITabBarItem alloc]initWithTitle:@"发货" image:nil selectedImage:nil];
+    scvc.tabBarItem = sendCargoTabBarItem;
+    scvc.view.backgroundColor = [UIColor orangeColor];
+    
+    //找货视图控制器
+    FindCargoViewController *fcvc = [[FindCargoViewController alloc]init];
+    UITabBarItem *findCargoTabBarItem = [[UITabBarItem alloc]initWithTitle:@"货源信息" image:nil selectedImage:nil];
+    fcvc.tabBarItem = findCargoTabBarItem;
+    fcvc.view.backgroundColor = [UIColor blackColor];
+    
+    //将几个视图控制器装在到标签控制器中
+    NSArray *viewControlls = [[NSMutableArray alloc]initWithObjects:scvc,fcvc,cargoInfosDefineUserNav,unc, nil];
+    tbc.viewControllers = viewControlls;
+    
+    //设置标签控制器 赋值给 window.rootViewController
+    self.window.rootViewController = tbc;
+    [self.window makeKeyAndVisible];
+    
     // Override point for customization after application launch.
     return YES;
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SViewController.h
 //  UINavigationControll
 //
 //  Created by 叶龙 on 16/3/11.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SViewController : UIViewController
 
 @end
-

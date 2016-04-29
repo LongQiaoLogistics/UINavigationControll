@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6FB06B351C93198E00AF7038"
-               BuildableName = "UINavigationControll.app"
-               BlueprintName = "UINavigationControll"
-               ReferencedContainer = "container:UINavigationControll.xcodeproj">
+               BuildableName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;.app"
+               BlueprintName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;"
+               ReferencedContainer = "container:&#x9f99;&#x5de7;&#x7269;&#x6d41;.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6FB06B351C93198E00AF7038"
-            BuildableName = "UINavigationControll.app"
-            BlueprintName = "UINavigationControll"
-            ReferencedContainer = "container:UINavigationControll.xcodeproj">
+            BuildableName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;.app"
+            BlueprintName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;"
+            ReferencedContainer = "container:&#x9f99;&#x5de7;&#x7269;&#x6d41;.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6FB06B351C93198E00AF7038"
-            BuildableName = "UINavigationControll.app"
-            BlueprintName = "UINavigationControll"
-            ReferencedContainer = "container:UINavigationControll.xcodeproj">
+            BuildableName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;.app"
+            BlueprintName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;"
+            ReferencedContainer = "container:&#x9f99;&#x5de7;&#x7269;&#x6d41;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6FB06B351C93198E00AF7038"
-            BuildableName = "UINavigationControll.app"
-            BlueprintName = "UINavigationControll"
-            ReferencedContainer = "container:UINavigationControll.xcodeproj">
+            BuildableName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;.app"
+            BlueprintName = "&#x9f99;&#x5de7;&#x7269;&#x6d41;"
+            ReferencedContainer = "container:&#x9f99;&#x5de7;&#x7269;&#x6d41;.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
